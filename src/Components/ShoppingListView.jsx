@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+
 import utils from './../Utils'
+
 export default class ShoppingListView extends Component {
     constructor(props) {
         super(props)
@@ -40,7 +42,7 @@ export default class ShoppingListView extends Component {
                         <img src={process.env.PUBLIC_URL+'logo64.png'} alt="Logo"/>
                         <button className="ui black button" onClick={()=> this.props.toggleModal('addShoppingList')}>Create Shoping List</button>
                     </div>
-                    <div style={{marginTop: '40px'}} className="body-content">
+                    <div style={{marginTop: '40px', marginBottom: '25px'}} className="body-content">
                         {
                             Object.keys(this.state.data).map((item, index) => {
                                 return (

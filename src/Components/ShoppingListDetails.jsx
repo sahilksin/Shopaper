@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+
 import utils from '../Utils'
+
 export default class ShoppingListDetails extends Component {
     constructor(props) {
         super(props)
@@ -16,9 +18,6 @@ export default class ShoppingListDetails extends Component {
         }
     }
 
-    editItem = (item) => {
-        this.props.toggleModal('updateShoppingList', item)
-    }
     deleteItem = (item, index) => {
         let ele = document.getElementById(`delete_shop_list-${index}`)
         ele.className = ele.className + ' loading disabled'
@@ -34,12 +33,13 @@ export default class ShoppingListDetails extends Component {
             this.props.getData()
         }, 1000)
     }
+
     toggleItemStatus = (item, index) => {
         let animateBack = document.getElementById('animatable'+index)
         let nameText = document.getElementById('strikeName'+index)
         let deleteBack = document.getElementById('delete_shop_list-'+index)
         let deleteText = document.getElementById('changeColor'+index)
-        let input = document.getElementById('input'+index)
+        // let input = document.getElementById('input'+index)
         if (!item.status) {
             let data = this.state.data
             let temp = []
@@ -98,7 +98,7 @@ export default class ShoppingListDetails extends Component {
                         <img src={process.env.PUBLIC_URL+'logo64.png'} alt="Logo"/>
                         <h2 style={{margin: '0px'}} className="pointer" onClick={() => this.props.viewShoppingList(false, null, {})}><i class="times icon"></i></h2>
                     </div>
-                    <div style={{marginTop: '40px'}} className="body-content">
+                    <div style={{marginTop: '40px', marginBottom: '25px'}} className="body-content">
                         <div className="header-button" style={{marginBottom: '25px'}}>
                             <h3 style={{margin: '0px', color: 'rgba(14, 92, 34, 100%)'}}>{this.state.shoppingListData.item}</h3>
                             <button className="ui basic button primary" onClick={()=>this.props.toggleModal('addItemToList', this.state.shoppingListData.item)}>Add Item</button>

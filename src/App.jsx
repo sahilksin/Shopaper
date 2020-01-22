@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import HomeView from './Components/HomeView'
 import ShoppingListView from './Components/ShoppingListView'
 import AddShoppingList from './Components/AddShoppingList'
@@ -6,6 +7,7 @@ import UpdateShoppingList from './Components/UpdateShoppingList'
 import ShoppingListDetails from './Components/ShoppingListDetails'
 import AddItemToList from './Components/AddItemToList'
 import utils from './Utils/'
+
 class App extends Component {
   constructor(props) {
     super(props)

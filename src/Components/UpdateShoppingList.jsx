@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+
 import utils from '../Utils'
+
 export default class UpdateShoppingList extends Component {
     constructor(props) {
         super(props) 
@@ -11,7 +13,7 @@ export default class UpdateShoppingList extends Component {
         }
     }
     // item to shopping list in index db
-    addShoppingList = () => {
+    updateShoppingList = () => {
         if (this.state.shoppingListName) {
             this.setState({
                 loading: true
@@ -47,7 +49,7 @@ export default class UpdateShoppingList extends Component {
                             <button class="ui button" onClick={()=> this.props.toggleModal('updateShoppingList')}>
                                 Close
                             </button>
-                            <button class={`ui primary button ${(this.state.loading)?'loading disabled': ''}`} onClick={() => this.addShoppingList()}>
+                            <button class={`ui primary button ${(this.state.loading)?'loading disabled': ''}`} onClick={() => this.updateShoppingList()}>
                                 Update 
                             </button>
                         </div>
