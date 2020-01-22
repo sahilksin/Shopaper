@@ -1,13 +1,214 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.homeView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.home-logo {
+  width: 110px;
+  height: 70px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(14, 92, 34, 80%);
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.ui.input .custom-input {
+  border: 2px solid rgba(14, 92, 34, 100%);
+}
+.ui.input i {
+  color: rgba(14, 92, 34, 100%);
+}
+.ui.input.focus>input, .ui.input>input:focus  {
+  border-color: rgba(14, 92, 34, 100%);
+}
+.footer-button {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ui.primary.button, .ui.primary.buttons .button, .ui.primary.button:focus, .ui.primary.buttons .button:focus {
+  background-color: rgba(14, 92, 34, 90%);
+}
+
+.ui.primary.button:hover, .ui.primary.buttons .button:hover {
+  background-color: rgba(14, 92, 34, 100%);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+
+.shoppingListView{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.head img {
+  height: 45px;
+  width: 73px;
+}
+
+.shoppingList {
+  width: 100%;
+  height: 55px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 25px rgba(162, 162, 162, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.left-details {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+}
+
+.right-actions {
+  padding-right: 10px;
+}
+
+.serial-no {
+  width: 55px;
+  height: 55px;
+  background: rgba(14, 92, 34, 100%);
+  border-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.name-date-shop-list {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+span {
+  font-size: 10px;
+  font-weight: bold;
+  color: rgba(150, 150, 150);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ui.basic.primary.button {
+  border: 2px solid rgba(14, 92, 34, 90%);
+  color: rgba(14, 92, 34, 100%) !important;
+  font-weight: bold;
+  box-shadow: 0 0 0 0px #2185d0 inset!important;
+}
+
+.ui.basic.primary.button:hover, .ui.basic.primary.button:focus  {
+  border: 2px solid rgba(14, 92, 34, 100%);
+  color: rgba(14, 92, 34, 100%) !important;
+  font-weight: bold;
+  box-shadow: 0 0 0 0px #2185d0 inset!important;
+}
+
+.animatable-back {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background: rgba(14, 92, 34, 100%);
+  z-index: -1;
+  border-radius: 4px;
+  transition: all 700ms ease-in-out;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.whiteColor {
+  color: white !important;
+}
+
+.whiteBG {
+  background: white !important;
+}
+
+.primaryColor {
+  color: rgba(14, 92, 34, 100%) !important;
+}
+.primaryBG{
+  background: rgba(14, 92, 34, 100%) !important;
+}
+
+@media (max-width: 750px) {
+  .shoppingListView{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .shoppingListView{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
